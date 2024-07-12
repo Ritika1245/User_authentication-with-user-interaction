@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-background {
+    @apply bg-gradient-to-l from-black to-gray-700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    @apply block w-full my-3 py-3 rounded-md;
+    @apply border p-3 border-blue-600 bg-white;
+}
+
+button{
+    @apply block w-full my-4 text-gray-700 font-semibold;
+    @apply border border-gray-500 rounded-xl px-6 py-3
+}
+
+
+
+
+
+
+
+button[type="submit"]:disabled, .submit:disabled{
+    @apply cursor-not-allowed bg-blue-400
+}
+
+
+span:hover{
+    @apply text-blue-700 cursor-pointer
+}
+
+:root {
+    --bg: #151c2c;
+    --bgSoft: #182237;
+    --text: white;
+    --textSoft: #b7bac1;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  
+
+
+  
+  .image{
+    position: relative;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.content:hover{
+    opacity: 1.5;
+    cursor: pointer;
+}
+
+.content > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
+.content:hover > *{
+    transform: translateY(0px);
+}
+
+  
